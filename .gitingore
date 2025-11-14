@@ -1,0 +1,5 @@
+# Ignore local environment files
+.env
+config.php
+*.log
+.DS_Store

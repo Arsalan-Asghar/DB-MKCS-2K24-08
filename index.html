@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Student Form</title>
+  <style>
+    body { font-family: system-ui, Arial; max-width:640px; margin:40px auto; padding:0 16px; }
+    label { display:block; margin-top:12px; }
+    input { width:100%; padding:8px; margin-top:6px; }
+    button { margin-top:16px; padding:10px 16px; }
+    .note { font-size:0.9rem; color:#555; margin-top:8px; }
+  </style>
+</head>
+<body>
+  <h1>Student Registration</h1>
+  <form action="submit.php" method="post">
+    <label>
+      Name
+      <input type="text" name="name" required maxlength="100" />
+    </label>
+
+    <label>
+      Roll Number (full format)
+      <input type="text" name="roll_number" required pattern=".{6,}" title="Full roll-number (minimum length 6)" />
+    </label>
+
+    <label>
+      Date of birth
+      <input type="date" name="date_of_birth" required />
+    </label>
+
+    <label>
+      One Hobby
+      <input type="text" name="hobby" required maxlength="100" />
+    </label>
+
+    <button type="submit">Submit</button>
+    <p class="note">Form posts to <code>submit.php</code>. Make sure PHP + MySQL are available on the host you will use.</p>
+  </form>
+</body>
+</html>
